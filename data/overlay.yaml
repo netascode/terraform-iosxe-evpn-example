@@ -1,0 +1,27 @@
+---
+fabric:
+  overlay:
+    bgp_asn: 65000
+
+    l2_services:
+      - id: 101
+        ipv4_multicast_group: 225.0.0.101
+        ip_learning: true
+      - id: 102
+
+    l3_services:
+      - name: green
+        id: 1000
+        svis:
+          - id: 1001
+            ipv4_address: 172.16.1.1
+            ipv4_mask: 255.255.255.0
+            ipv4_multicast_group: 225.0.1.1
+            ip_learning: true
+            re_originate_route_type5: true
+      - name: blue
+        id: 1010
+        svis:
+          - id: 1011
+            ipv4_address: 172.17.1.1
+            ipv4_mask: 255.255.255.0
