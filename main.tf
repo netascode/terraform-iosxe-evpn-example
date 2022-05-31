@@ -50,7 +50,7 @@ module "iosxe_evpn_ospf_underlay" {
 
 module "iosxe_evpn_overlay" {
   source  = "netascode/evpn-overlay/iosxe"
-  version = ">= 0.1.0"
+  version = ">= 0.1.1"
 
   leafs                = local.leafs
   spines               = local.spines

@@ -1,4 +1,4 @@
-# Catalyst 9000 EVPN Terraform Example
+# Cisco Catalyst 9000 EVPN Terraform Example
 
 This example demonstrates how the [IOS-XE Terraform Provider](https://registry.terraform.io/providers/netascode/iosxe/latest/docs) can be used to build a Catalyst 9000 EVPN Fabric. It currently supports underlay and overlay configuration, but no access interfaces.
 
