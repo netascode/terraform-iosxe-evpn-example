@@ -4,11 +4,11 @@ terraform {
   required_providers {
     iosxe = {
       source  = "netascode/iosxe"
-      version = ">=0.1.7"
+      version = ">=0.1.13"
     }
     utils = {
       source  = "netascode/utils"
-      version = ">= 0.1.1"
+      version = ">= 0.2.4"
     }
   }
 }
@@ -50,7 +50,7 @@ module "iosxe_evpn_ospf_underlay" {
 
 module "iosxe_evpn_overlay" {
   source  = "netascode/evpn-overlay/iosxe"
-  version = ">= 0.1.1"
+  version = ">= 0.1.2"
 
   leafs                = local.leafs
   spines               = local.spines
