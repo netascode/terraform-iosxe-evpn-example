@@ -3,8 +3,8 @@ terraform {
 
   required_providers {
     iosxe = {
-      source  = "netascode/iosxe"
-      version = ">=0.1.13"
+      source  = "CiscoDevNet/iosxe"
+      version = ">= 0.3.0"
     }
     utils = {
       source  = "netascode/utils"
@@ -31,7 +31,7 @@ data "utils_yaml_merge" "model" {
 
 module "iosxe_evpn_ospf_underlay" {
   source  = "netascode/evpn-ospf-underlay/iosxe"
-  version = ">= 0.1.0"
+  version = ">= 0.1.1"
 
   leafs                         = local.leafs
   spines                        = local.spines
@@ -50,7 +50,7 @@ module "iosxe_evpn_ospf_underlay" {
 
 module "iosxe_evpn_overlay" {
   source  = "netascode/evpn-overlay/iosxe"
-  version = ">= 0.1.2"
+  version = ">= 0.1.3"
 
   leafs                = local.leafs
   spines               = local.spines
